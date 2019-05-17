@@ -6,15 +6,22 @@ class Carousel {
     // Get all images in the carousel
     this.images = carousel.querySelectorAll('img');
 
-    // Get image index and call Image class on it
-    this.imageIndex;
-    this.images.forEach((image, index) => {
-      this.imageIndex = index;
-      new Image(image, index)
-    });
+    this.leftButton = carousel.querySelector('.left-button');
+    this.rightButton = carousel.querySelector('.right-button');
+
+    this.currentIndex = 0;
+    this.images[this.currentIndex].style.display = 'block';
+
+    this.leftButton.addEventListener('click', () => this.showLeftImage())
   }
 
-  
+  showLeftImage() {
+    this.images.forEach(image => {
+      image.style.display = 'none';
+    });
+    this.currentIndex < 2 ? this.currentIndex++ : this.currentIndex = 0;
+    this.images[this.currentIndex].style.display = 'block';
+  }
 }
 
 class Image {
@@ -22,15 +29,25 @@ class Image {
     this.image = image;
     this.index = index;
 
+    // console.log(index, image)
+    // Get all images
+    this.images = document.querySelectorAll('.carousel img');
+
     // Get the carousel
     let carousel = document.querySelector('.carousel');
     // Get left and right arrow
     this.leftButton = carousel.querySelector('.left-button');
     this.rightButton = carousel.querySelector('.right-button');
+
+    this.leftButton.addEventListener('click', () => this.showLeftImage(this.index));
   }
 
-  showLeftImage() {
-    // console.log(index)
+  showLeftImage(index) {
+    console.log(index)
+    // Array.from(this.image).forEach((image, index) => {
+    //   // if(this.index === index) image.setAttribute('style', 'display: flex')
+    //   if(this.index === index) c
+    // })
   }
 
   showRightImage() {
