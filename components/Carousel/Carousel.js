@@ -10,7 +10,11 @@ class Carousel {
     this.images = carousel.querySelectorAll('img');
 
     // Get image index and call Image class on it
-    this.images.forEach((image, index) => new Image(image, index));
+    this.imageIndex;
+    this.images.forEach((image, index) => {
+      this.imageIndex = index;
+      new Image(image, index)
+    });
     
     // Add click events to the left and right buttons
     // this.leftButton.addEventListener('click', )
