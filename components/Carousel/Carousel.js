@@ -13,6 +13,7 @@ class Carousel {
     this.images[this.currentIndex].style.display = 'block';
 
     this.leftButton.addEventListener('click', () => this.showLeftImage())
+    this.rightButton.addEventListener('click', () => this.showRightImage())
   }
 
   showLeftImage() {
@@ -20,6 +21,15 @@ class Carousel {
       image.style.display = 'none';
     });
     this.currentIndex === 0 ? this.currentIndex = 3 : this.currentIndex--;
+    this.images[this.currentIndex].style.display = 'block';
+  }
+
+  showRightImage() {
+    this.images.forEach(image => {
+      image.style.display = 'none';
+    });
+    this.currentIndex < 3 ? this.currentIndex++ : this.currentIndex = 0;
+    console.log(this.currentIndex)
     this.images[this.currentIndex].style.display = 'block';
   }
 }
