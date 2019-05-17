@@ -2,9 +2,6 @@ class Carousel {
   constructor(carousel) {
     // Set carousel as this.carousel
     this.carousel = carousel;
-    // Get left and right arrow
-    this.leftButton = carousel.querySelector('.left-button');
-    this.rightButton = carousel.querySelector('.right-button');
 
     // Get all images in the carousel
     this.images = carousel.querySelectorAll('img');
@@ -15,24 +12,28 @@ class Carousel {
       this.imageIndex = index;
       new Image(image, index)
     });
-    
-    // Add click events to the left and right buttons
-    // this.leftButton.addEventListener('click', )
   }
 
-  showLeftImage() {
-
-  }
-
-  showRightImage() {
-
-  }
+  
 }
 
 class Image {
   constructor(image, index) {
     this.image = image;
     this.index = index;
+
+    // Get the carousel
+    let carousel = document.querySelector('.carousel');
+    // Get left and right arrow
+    this.leftButton = carousel.querySelector('.left-button');
+    this.rightButton = carousel.querySelector('.right-button');
+  }
+
+  showLeftImage() {
+    // console.log(index)
+  }
+
+  showRightImage() {
   }
 }
 
