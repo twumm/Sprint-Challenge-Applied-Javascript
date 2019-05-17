@@ -29,7 +29,6 @@ class Carousel {
       image.style.display = 'none';
     });
     this.currentIndex < 3 ? this.currentIndex++ : this.currentIndex = 0;
-    console.log(this.currentIndex)
     this.images[this.currentIndex].style.display = 'block';
   }
 }
