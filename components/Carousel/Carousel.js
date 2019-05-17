@@ -24,36 +24,6 @@ class Carousel {
   }
 }
 
-class Image {
-  constructor(image, index) {
-    this.image = image;
-    this.index = index;
-
-    // console.log(index, image)
-    // Get all images
-    this.images = document.querySelectorAll('.carousel img');
-
-    // Get the carousel
-    let carousel = document.querySelector('.carousel');
-    // Get left and right arrow
-    this.leftButton = carousel.querySelector('.left-button');
-    this.rightButton = carousel.querySelector('.right-button');
-
-    this.leftButton.addEventListener('click', () => this.showLeftImage(this.index));
-  }
-
-  showLeftImage(index) {
-    console.log(index)
-    // Array.from(this.image).forEach((image, index) => {
-    //   // if(this.index === index) image.setAttribute('style', 'display: flex')
-    //   if(this.index === index) c
-    // })
-  }
-
-  showRightImage() {
-  }
-}
-
 let carousel = document.querySelector('.carousel');
 new Carousel(carousel);
 
