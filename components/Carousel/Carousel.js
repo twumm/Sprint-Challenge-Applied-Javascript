@@ -5,6 +5,14 @@ class Carousel {
     // Get left and right arrow
     this.leftButton = carousel.querySelector('.left-button');
     this.rightButton = carousel.querySelector('.right-button');
+
+    // Get all images in the carousel
+    this.images = carousel.querySelectorAll('img');
+
+    // Get image index
+    this.imageIndex;
+    this.images.forEach((image, index) => this.imageIndex = index)
+    
   }
 }
 
