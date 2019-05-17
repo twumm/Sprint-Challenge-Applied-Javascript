@@ -1,8 +1,17 @@
 class Carousel {
-
+  constructor(carousel) {
+    // Set carousel as this.carousel
+    this.carousel = carousel;
+    // Get left and right arrow
+    this.leftButton = carousel.querySelector('.left-button');
+    this.rightButton = carousel.querySelector('.right-button');
+  }
 }
 
-let carousel = document.querySelector();
+let carousel = document.querySelector('.carousel');
+new Carousel(carousel);
+
+
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
     1. You will need to grab a reference to the carousel, and in it grab the left and right buttons
