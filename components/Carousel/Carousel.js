@@ -19,7 +19,7 @@ class Carousel {
     this.images.forEach(image => {
       image.style.display = 'none';
     });
-    this.currentIndex < 2 ? this.currentIndex++ : this.currentIndex = 0;
+    this.currentIndex === 0 ? this.currentIndex = 3 : this.currentIndex--;
     this.images[this.currentIndex].style.display = 'block';
   }
 }
