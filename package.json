@@ -1,0 +1,22 @@
+{
+  "name": "05-sprint-challenge-applied-javascript",
+  "version": "1.0.0",
+  "description": "This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored the DOM and the concept of components. During this Sprint, you studied the DOM, DOM Events, and Components. In your challenge this week, you will demonstrate proficiency by creating an online Lambda newspaper called \"Lambda Times.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twumm/Sprint-Challenge-Applied-Javascript.git"
+  },
+  "author": "twumm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twumm/Sprint-Challenge-Applied-Javascript/issues"
+  },
+  "homepage": "https://github.com/twumm/Sprint-Challenge-Applied-Javascript#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
